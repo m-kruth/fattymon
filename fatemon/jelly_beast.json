@@ -1,0 +1,50 @@
+{
+    "fatemon":
+    {
+        "name": "jelly beast",
+        "desc": "A vast and legendary beast that roams the seven seas. Terrorising unsuspecting sailors and engineers alike.",
+        "hit_points": 300,
+        "defence": 10,
+        "attack": 10,
+
+        "moves":
+        [
+            {
+                "name": "jelly belly",
+                "description": "Jelly beast smashes a jar of jelly on belly and lubricates it itself",
+                "attack": 10,
+                "buff": "none",
+                "buff_chance": 0,
+                "debuff": "none",
+                "debuff_chance": 0
+            },
+            {
+                "name": "Reschedule meeting",
+                "description": "Jelly beast reschedules your meetings, infuriating you and your Fatemon",
+                "attack": 10,
+                "buff": "none",
+                "buff_chance": 0,
+                "debuff": "none",
+                "debuff_chance": 0
+            },
+            {
+                "name": "Body Slam",
+                "description": "You are crushed under a mountain of flesh",
+                "attack": 10,
+                "buff": "none",
+                "buff_chance": 0,
+                "debuff": "none",
+                "debuff_chance": 0
+            },
+            {
+                "name": "belly juice",
+                "description": "a vile squirt of belly juice blinds your Fatemon",
+                "attack": 10,
+                "buff": "none",
+                "buff_chance": 0,
+                "debuff": "none",
+                "debuff_chance": 0
+            }
+        ]
+    }
+}

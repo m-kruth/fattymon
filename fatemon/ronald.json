@@ -1,0 +1,50 @@
+{
+    "fatemon":
+    {
+        "name": "ronald",
+        "desc": "",
+        "hit_points": 300,
+        "defence": 10,
+        "attack": 10,
+
+        "moves":
+        [
+            {
+                "name": "Keg Toss",
+                "description": "Ronald lobs Keg at your fatemon's head. The mass alone yeilds devestating damage",
+                "attack": 10,
+                "buff": "none",
+                "buff_chance": 0,
+                "debuff": "none",
+                "debuff_chance": 0
+            },
+            {
+                "name": "Pie time!",
+                "description": "Ronald takes a few hours off to eat a pie. He regains some health.",
+                "attack": 10,
+                "buff": "none",
+                "buff_chance": 0,
+                "debuff": "none",
+                "debuff_chance": 0
+            },
+            {
+                "name": "Body Slam",
+                "description": "You are crushed under a mountain of flesh",
+                "attack": 10,
+                "buff": "none",
+                "buff_chance": 0,
+                "debuff": "none",
+                "debuff_chance": 0
+            },
+            {
+                "name": "'I love Mcdonalds'",
+                "description": "Ronald tells you he loves Mcdonalds. That's it... No actual move here he just likes McDonalds a lot",
+                "attack": 0,
+                "buff": "none",
+                "buff_chance": 0,
+                "debuff": "none",
+                "debuff_chance": 0
+            }
+        ]
+    }
+}
