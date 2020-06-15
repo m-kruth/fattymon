@@ -12,7 +12,7 @@
             {
                 "name": "Contort",
                 "description": "Belliot contorts it's limbs into impossible positions to create a rigid orb-type thing. It's defence-rises sharply!",
-                "attack": 10,
+                "attack": 0,
                 "type": "buff",
                 "hp": 0,
                 "def": 10,
