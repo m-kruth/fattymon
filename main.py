@@ -44,13 +44,13 @@ class Fatemon:
         with open(file) as json_file:
             data = json.load(json_file)
             move_data = data['fatemon']['moves'][0]
-            self.Move_1 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'] ) 
+            self.Move_1 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'], move_data['type'] ) 
             move_data = data['fatemon']['moves'][1]
-            self.Move_2 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'] ) 
+            self.Move_2 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'], move_data['type'] ) 
             move_data = data['fatemon']['moves'][2]
-            self.Move_3 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'] ) 
+            self.Move_3 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'], move_data['type'] ) 
             move_data = data['fatemon']['moves'][3]
-            self.Move_4 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'] ) 
+            self.Move_4 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'], move_data['type'] ) 
         self.moves = [self.Move_1.name, self.Move_2.name, self.Move_3.name, self.Move_4.name]
     
     def yell(self):
@@ -116,22 +116,18 @@ if selection == '1':
         if selection == '1':
             damage = players_beast.Move_1.calculate_dmg()
             computers_beast.hit_points = computers_beast.hit_points - damage
-            print(players_beast.Move_1.description)
             print("players", players_beast.name, "hit for", damage, '!')
         elif selection == '2':
             damage = players_beast.Move_2.calculate_dmg()
             computers_beast.hit_points = computers_beast.hit_points - damage
-            print(players_beast.Move_2.description)
             print("players", players_beast.name, "hit for", damage, '!')
         elif selection == '3':
             damage = players_beast.Move_3.calculate_dmg()
             computers_beast.hit_points = computers_beast.hit_points - damage
-            print(players_beast.Move_3.description)
             print("players", players_beast.name, "hit for", damage, '!')
         elif selection == '4':
             damage = players_beast.Move_4.calculate_dmg()
             computers_beast.hit_points = computers_beast.hit_points - damage
-            print(players_beast.Move_4.description)
             print("players", players_beast.name, "hit for", damage, '!')
         
         if (computers_beast.hit_points < 0):
@@ -142,22 +138,18 @@ if selection == '1':
         if comp_selection == '1':
             damage = computers_beast.Move_1.calculate_dmg()
             players_beast.hit_points = players_beast.hit_points - damage
-            print(computers_beast.Move_1.description)
             print("computers", computers_beast.name, "hit for", damage, '!')
         elif comp_selection == '2':
             damage = computers_beast.Move_2.calculate_dmg()
             players_beast.hit_points = players_beast.hit_points - damage
-            print(computers_beast.Move_2.description)
             print("computers", computers_beast.name, "hit for", damage, '!')
         elif comp_selection == '3':
             damage = computers_beast.Move_3.calculate_dmg()
             players_beast.hit_points = players_beast.hit_points - damage
-            print(computers_beast.Move_3.description)
             print("computers", computers_beast.name, "hit for", damage, '!')
         elif comp_selection == '4':
             damage = computers_beast.Move_4.calculate_dmg()
             players_beast.hit_points = players_beast.hit_points - damage
-            print(computers_beast.Move_4.description)
             print("computers", computers_beast.name, "hit for", damage, '!')
 
         if (players_beast.hit_points < 0):
