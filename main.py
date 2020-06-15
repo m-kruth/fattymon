@@ -63,7 +63,7 @@ class Fatemon:
         print("Hit Points:", self.hit_points)
         print("Moves:", self.moves)
     
-    def affect(self, dmg, heal, buff_atk, buff_def):
+    def combat_affect(self, dmg, heal, buff_atk, buff_def):
         self.hit_points += (-1*dmg) + heal
         self.attack += buff_atk
         self.defence += buff_def
@@ -75,6 +75,9 @@ class Move:
         self.description = desc
         self.attack = atk
         self.type = None
+        self.hp = 0
+        self.buff_def = 0
+        self.buff_atk = 0
 
 
     def combat(self):
@@ -83,7 +86,7 @@ class Move:
             print(self.description)
             return([dmg, 0 , 0, 0])
         elif self.type == "buff":
-            pass
+            return([dmg, self.hp, self.buff_atk, self.buff_def])
             
     
 
