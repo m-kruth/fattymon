@@ -44,13 +44,13 @@ class Fatemon:
         with open(file) as json_file:
             data = json.load(json_file)
             move_data = data['fatemon']['moves'][0]
-            self.Move_1 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'] ) 
+            self.Move_1 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'], move_data['hp'], move_data['def'], move_data['atk'] ) 
             move_data = data['fatemon']['moves'][1]
-            self.Move_2 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'] ) 
+            self.Move_2 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'], move_data['hp'], move_data['def'], move_data['atk'] ) 
             move_data = data['fatemon']['moves'][2]
-            self.Move_3 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'] ) 
+            self.Move_3 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'], move_data['hp'], move_data['def'], move_data['atk'] ) 
             move_data = data['fatemon']['moves'][3]
-            self.Move_4 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'] ) 
+            self.Move_4 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'], move_data['hp'], move_data['def'], move_data['atk'] ) 
         self.moves = [self.Move_1.name, self.Move_2.name, self.Move_3.name, self.Move_4.name]
     
     def yell(self):
@@ -70,7 +70,7 @@ class Fatemon:
 
 
 class Move:
-    def __init__(self, name, desc, atk, type):
+    def __init__(self, name, desc, atk, type, hp, buff_def, buff_atk):
         self.name = name
         self.description = desc
         self.attack = atk
