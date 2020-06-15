@@ -12,11 +12,15 @@
             {
                 "name": "Keg Toss",
                 "description": "Ronald lobs Keg at your fatemon's head. The mass alone yeilds devestating damage",
-                "attack": 10,
+                "attack": 20,
                 "buff": "none",
                 "buff_chance": 0,
                 "debuff": "none",
-                "debuff_chance": 0
+                "debuff_chance": 0,
+                "type": "attack",
+                "hp": 0,
+                "def": 0,
+                "atk": 0
             },
             {
                 "name": "Pie time!",
@@ -25,7 +29,11 @@
                 "buff": "none",
                 "buff_chance": 0,
                 "debuff": "none",
-                "debuff_chance": 0
+                "debuff_chance": 0,
+                "type": "buff",
+                "hp": 50,
+                "def": 0,
+                "atk": 0
             },
             {
                 "name": "Body Slam",
@@ -34,7 +42,11 @@
                 "buff": "none",
                 "buff_chance": 0,
                 "debuff": "none",
-                "debuff_chance": 0
+                "debuff_chance": 0,
+                "type": "attack",
+                "hp": 0,
+                "def": 0,
+                "atk": 0
             },
             {
                 "name": "'I love Mcdonalds'",
@@ -43,7 +55,11 @@
                 "buff": "none",
                 "buff_chance": 0,
                 "debuff": "none",
-                "debuff_chance": 0
+                "debuff_chance": 0,
+                "type": "buff",
+                "hp": 0,
+                "def": 0,
+                "atk": 0
             }
         ]
     }

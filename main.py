@@ -64,7 +64,7 @@ class Fatemon:
         print("Moves:", self.moves)
 
 class Move:
-    def __init__(self, name, desc, atk, buff, bchance, dbuff, db_chance):
+    def __init__(self, name, desc, atk, buff, bchance, dbuff, db_chance, type):
         self.name = name
         self.description = desc
         self.attack = atk
@@ -72,9 +72,12 @@ class Move:
         self.bchance = bchance
         self.dbuff = dbuff
         self.db_chance = db_chance
+        self.type = None
+
 
     def calculate_dmg(self):
         dmg = self.attack * random.randrange(700, 1300, 100)
+        print(self.description)
         return(dmg//1000)
     
 
