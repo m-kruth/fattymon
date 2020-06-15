@@ -125,20 +125,20 @@ if selection == '1':
 
         if selection == '1':
             damage = players_beast.Move_1.combat()
-            players_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
+            computers_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
             print("players", players_beast.name, "hit for", damage, '!')
             print("players def", players_beast.defence)
         elif selection == '2':
             damage = players_beast.Move_2.combat()
-            players_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
+            computers_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
             print("players", players_beast.name, "hit for", damage, '!')
         elif selection == '3':
             damage = players_beast.Move_3.combat()
-            players_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
+            computers_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
             print("players", players_beast.name, "hit for", damage, '!')
         elif selection == '4':
             damage = players_beast.Move_4.combat()
-            players_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
+            computers_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
             print("players", players_beast.name, "hit for", damage, '!')
         
         if (computers_beast.hit_points < 0):
@@ -148,19 +148,19 @@ if selection == '1':
         comp_selection = str(random.randrange(1, 5, 1))
         if comp_selection == '1':
             damage = computers_beast.Move_1.combat()
-            computers_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
+            players_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
             print("computers", computers_beast.name, "hit for", damage, '!')
         elif comp_selection == '2':
             damage = computers_beast.Move_2.combat()
-            computers_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
+            players_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
             print("computers", computers_beast.name, "hit for", damage, '!')
         elif comp_selection == '3':
             damage = computers_beast.Move_3.combat()
-            computers_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
+            players_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
             print("computers", computers_beast.name, "hit for", damage, '!')
         elif comp_selection == '4':
             damage = computers_beast.Move_4.combat()
-            computers_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
+            players_beast.combat_affect(damage[0], damage[1], damage[2], damage[3])
             print("computers", computers_beast.name, "hit for", damage, '!')
 
         if (players_beast.hit_points < 0):
