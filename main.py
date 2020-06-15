@@ -64,7 +64,7 @@ class Fatemon:
         print("Moves:", self.moves)
     
     def combat_affect(self, dmg, heal, buff_atk, buff_def):
-        self.hit_points += (-1*dmg) + heal
+        self.hit_points += (-1*dmg + -0.1*self.defence) + heal
         self.attack += buff_atk
         self.defence += buff_def
 
