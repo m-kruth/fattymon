@@ -44,13 +44,13 @@ class Fatemon:
         with open(file) as json_file:
             data = json.load(json_file)
             move_data = data['fatemon']['moves'][0]
-            self.Move_1 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'], move_data['type'] ) 
+            self.Move_1 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'] ) 
             move_data = data['fatemon']['moves'][1]
-            self.Move_2 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'], move_data['type'] ) 
+            self.Move_2 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'] ) 
             move_data = data['fatemon']['moves'][2]
-            self.Move_3 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'], move_data['type'] ) 
+            self.Move_3 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'] ) 
             move_data = data['fatemon']['moves'][3]
-            self.Move_4 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['buff'], move_data['buff_chance'], move_data['debuff'], move_data['debuff_chance'], move_data['type'] ) 
+            self.Move_4 = Move(move_data['name'], move_data['description'], move_data['attack'], move_data['type'] ) 
         self.moves = [self.Move_1.name, self.Move_2.name, self.Move_3.name, self.Move_4.name]
     
     def yell(self):
@@ -70,14 +70,10 @@ class Fatemon:
 
 
 class Move:
-    def __init__(self, name, desc, atk, buff, bchance, dbuff, db_chance, type):
+    def __init__(self, name, desc, atk, type):
         self.name = name
         self.description = desc
         self.attack = atk
-        self.buff = buff
-        self.bchance = bchance
-        self.dbuff = dbuff
-        self.db_chance = db_chance
         self.type = None
 
 
@@ -86,7 +82,9 @@ class Move:
             dmg = self.attack * random.randrange(700, 1300, 100)
             print(self.description)
             return([dmg, 0 , 0, 0])
-        elif self.type == "buff"
+        elif self.type == "buff":
+            pass
+            
     
 
 print(title)
