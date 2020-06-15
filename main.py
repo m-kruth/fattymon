@@ -62,6 +62,12 @@ class Fatemon:
         print("description:", self.desc)
         print("Hit Points:", self.hit_points)
         print("Moves:", self.moves)
+    
+    def affect(self, dmg, heal, buff_atk, buff_def):
+        self.hit_points += (-1*dmg) + heal
+        self.attack += buff_atk
+        self.defence += buff_def
+
 
 class Move:
     def __init__(self, name, desc, atk, buff, bchance, dbuff, db_chance, type):
@@ -75,10 +81,12 @@ class Move:
         self.type = None
 
 
-    def calculate_dmg(self):
-        dmg = self.attack * random.randrange(700, 1300, 100)
-        print(self.description)
-        return(dmg//1000)
+    def combat(self):
+        if self.type == "attack":
+            dmg = self.attack * random.randrange(700, 1300, 100)
+            print(self.description)
+            return([dmg, 0 , 0, 0])
+        elif self.type == "buff"
     
 
 print(title)
