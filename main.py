@@ -92,6 +92,7 @@ class Move:
             return([dmg//1000, 0 , 0, 0])
         elif self.type == "buff":
             dmg = self.attack * random.randrange(700, 1300, 100)
+            print(self.description)
             return([dmg//1000, self.hp, self.buff_atk, self.buff_def])
             
     
@@ -133,7 +134,6 @@ if selection == '1':
             computers_beast.combat_dmg(damage[0])
             players_beast.combat_buff(damage[1], damage[2], damage[3])
             print("players", players_beast.name, "hit for", damage, '!')
-            print("players def", players_beast.defence)
         elif selection == '2':
             damage = players_beast.Move_2.combat()
             computers_beast.combat_dmg(damage[0])
