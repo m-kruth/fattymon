@@ -4,7 +4,7 @@
         "name": "jelly beast",
         "desc": "A vast and legendary beast that roams the seven seas. Terrorising unsuspecting sailors and engineers alike.",
         "hit_points": 300,
-        "defence": 10,
+        "defence": 0,
         "attack": 10,
 
         "moves":

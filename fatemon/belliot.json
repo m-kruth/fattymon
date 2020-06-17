@@ -4,7 +4,7 @@
         "name": "belliot",
         "desc": "A slug-type fatty that jiggles about spraying its putrid sweat.",
         "hit_points": 200,
-        "defence": 10,
+        "defence": 2,
         "attack": 10,
 
         "moves":
@@ -15,7 +15,7 @@
                 "attack": 0,
                 "type": "buff",
                 "hp": 0,
-                "def": 10,
+                "def": 1,
                 "atk": 0
             },
             {
