@@ -138,9 +138,17 @@ if selection == '1':
 
     console.print(battle_start)
 
+    computers_beast_og_hp = computers_beast.hit_points
+    players_beast_og_hp = players_beast.hit_points
+
     while (computers_beast.hit_points > 0) and (players_beast.hit_points > 0):
+        
         print("computers", computers_beast.name, "\nHit points:", computers_beast.hit_points)
+        diff = computers_beast_og_hp - computers_beast.hit_points
+        print("|" + "-"*(int(computers_beast.hit_points/10)) + " "*(int(diff/10)) + "|")
         print("players", players_beast.name, "\nHit points:", players_beast.hit_points)
+        diff = players_beast_og_hp - players_beast.hit_points
+        print("|" + "-"*(int(players_beast.hit_points/10)) + " "*(int(diff/10)) + "|")
         print("[1]", players_beast.Move_1.name)
         print("[2]", players_beast.Move_2.name)
         print("[3]", players_beast.Move_3.name)
