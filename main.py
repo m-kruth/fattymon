@@ -1,7 +1,19 @@
 import json
 import glob
 import random
-title = """
+from rich import print
+from rich.console import Console
+from rich.table import Column, Table
+from rich.columns import Columns
+from rich.panel import Panel
+from rich.markdown import Markdown
+
+console = Console()
+
+title_table = Table(show_header=True, header_style="bold magenta")
+
+
+title_table.add_column("""
 ███████  █████  ████████ ████████ ██    ██ ███    ███  ██████  ███    ██     
 ██      ██   ██    ██       ██     ██  ██  ████  ████ ██    ██ ████   ██     
 █████   ███████    ██       ██      ████   ██ ████ ██ ██    ██ ██ ██  ██     
@@ -9,7 +21,10 @@ title = """
 ██      ██   ██    ██       ██       ██    ██      ██  ██████  ██   ████     
                                                                              
 Like pokemon but with out-of-shape software engineers
-                                                                            """
+                                                                            """)
+
+title_table.add_row("Press 1 to Fight Computer | Press 2 to take a fat nap")
+
 
 def load_fattys():
     fatty_list = []
@@ -97,16 +112,18 @@ class Move:
             
     
 
-print(title)
+console.print(title_table)
 
-selection = input("[1]Fight Computer\n[2]Take a fat nap\nMake your choice:")
+selection = input()
 
 if selection == '1':
-    print("fight computer")
+    # print("fight computer")
     fatlist = load_fattys()
     fat_len = len(fatlist)
-    for i in range(len(fatlist)):
-        print('['+str(i)+']', fatlist[i])
+    renderlist = fatlist.copy()
+    for i in range(len(renderlist)):
+        renderlist[i] = Panel(renderlist[i] + ' | ' + str(i))
+    print(Columns(renderlist))
     selection = input('Pick a beast:')
     players_beast = Fatemon(fatlist[int(selection)])
     players_beast.load_info()
@@ -117,8 +134,9 @@ if selection == '1':
     computers_beast.load_moves()
 
     # battle sequence
-    print(players_beast.name, "versus", computers_beast.name)
+    battle_start = Markdown("# " + players_beast.name + "(player) versus " + computers_beast.name + "(computer)", style="bold red")
 
+    console.print(battle_start)
 
     while (computers_beast.hit_points > 0) and (players_beast.hit_points > 0):
         print("computers", computers_beast.name, "\nHit points:", computers_beast.hit_points)
