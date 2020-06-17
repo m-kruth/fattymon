@@ -1,6 +1,7 @@
 import json
 import glob
 import random
+import time
 from rich import print
 from rich.console import Console
 from rich.table import Column, Table
@@ -140,6 +141,11 @@ if selection == '1':
 
     computers_beast_og_hp = computers_beast.hit_points
     players_beast_og_hp = players_beast.hit_points
+    players_moves = players_beast.moves
+    for i in range(len(players_moves)):
+        players_moves[i] = Panel(players_moves[i] + ' | ' + str(i))
+        
+
 
     while (computers_beast.hit_points > 0) and (players_beast.hit_points > 0):
         
@@ -149,12 +155,9 @@ if selection == '1':
         print("players", players_beast.name, "\nHit points:", players_beast.hit_points)
         diff = players_beast_og_hp - players_beast.hit_points
         print("|" + "-"*(int(players_beast.hit_points/10)) + " "*(int(diff/10)) + "|")
-        print("[1]", players_beast.Move_1.name)
-        print("[2]", players_beast.Move_2.name)
-        print("[3]", players_beast.Move_3.name)
-        print("[4]", players_beast.Move_4.name)
+        print(Columns(players_moves))
         selection = input("select a move:")
-
+        time.sleep(1)
         if selection == '1':
             damage = players_beast.Move_1.combat()
             computers_beast.combat_dmg(damage[0])
